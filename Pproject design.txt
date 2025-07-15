@@ -1,0 +1,35 @@
+
+Cisco Packet Tracer File: Basic Campus Network Design
+
+1. Components to Add:
+    - 1 Router (e.g., Cisco 2811) for ISP connectivity.
+    - 1 Layer 3 Switch (Core Switch).
+    - 6 Layer 2 Switches (one for each department and office).
+    - End devices: Desktops and laptops for each department.
+    - Connection types:
+        - Fiber optic for router to core switch connection.
+        - Ethernet for core switch to department switches.
+        - Ethernet for department switches to end devices.
+
+2. Connections:
+    - Router's GigabitEthernet0/0 connected to the Core Switch's first Gigabit port.
+    - Core Switch's other ports connected to each Layer 2 switch.
+    - PCs connected to the Layer 2 switches' FastEthernet ports.
+
+3. Configurations:
+    - Assign private IPs to departments using DHCP:
+        - Admin Block: 192.168.1.0/24
+        - Library: 192.168.2.0/24
+        - Department 1: 192.168.3.0/24
+        - Department 2: 192.168.4.0/24
+        - Department 3: 192.168.5.0/24
+        - Other Offices: 192.168.6.0/24
+
+4. VLANs:
+    - VLAN 10 for Admin, VLAN 20 for Library, VLAN 30 for each department, VLAN 40 for Offices.
+
+5. QoS (Optional):
+    - Configure QoS policies for fair bandwidth distribution.
+
+Save and test the simulation in Cisco Packet Tracer.
+
